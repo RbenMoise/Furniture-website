@@ -60,7 +60,7 @@
   }
   #menu-icon{
     cursor: pointer;
-    display: none;
+    display:;
     font-size: 2rem;
   }
 
@@ -96,4 +96,63 @@
     color: aliceblue;
 }.btn:hover{
     background: var(--main-color);
+}
+
+.shop-container{
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.heading{
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 12px;
+}
+.box{
+  width: 30%;
+  border-radius: 40px 40px 0 0;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.box-img{
+  overflow: hidden;
+  border-radius: 40px 0 0 0;
+}
+img{
+  width: 100%;
+  
+  transition: transform 0.3s;
+}
+.box-img img:hover{
+  transform: scale(1.1);
+}
+.title-pricing{
+  display: flex;
+  padding: 0 5px 0 10px;
+  margin-top:20px;
+  justify-content: space-between;
+}
+.title-pricing h3{
+  font-weight: 300;
+  font-size: 1rem;
+}
+.box span{
+  color: var(--main-color);
+  font-size: 1.2rem;
+  padding-left: 12px;
+
+}
+.stars{
+  color: #83b752;
+  font-size: 20px;
+}
+.stars:hover{
+  opacity: .5;
+}
+.cart{
+  padding: 0 3px 0 1px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
