@@ -199,11 +199,39 @@ img{
 /*branding*/
 .brandcontainer{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+  grid-template-columns: repeat(6, minmax(100px, 1fr));
   align-items: center;
   justify-content: space-between;
   margin-top: 2rem;
+  gap: 2rem;
 }
 .brandcontainer img{
-  width: 100px;
+  width: 100%;
+  height: auto;
+  filter: grayscale(1);
+}
+.brandcontainer img:hover{
+  filter: grayscale(0);
+}
+
+/*newsletter*/
+.newsletter{
+  background-image: url(img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.newsletter h2{
+  margin-bottom: 50px;
+  color: white;
+}
+.newsbox{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+
 }
