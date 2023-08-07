@@ -118,10 +118,13 @@
 }
 .box-img{
   overflow: hidden;
+  object-fit: cover;
   border-radius: 40px 0 0 0;
 }
 img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   
   transition: transform 0.3s;
 }
@@ -167,9 +170,9 @@ img{
   gap: 80px;
 }
 .thirdcontainer .pic{
-  border-radius: 9px;
+  border-radius: 20px;
   padding: 10px;
-  max-width: 80%;
+  max-width: 100%;
 }
 .content{
   display: flex;
@@ -195,11 +198,14 @@ img{
 .content .btn{
   margin-top:20px ;
 }
+.pic img{
+  border-radius: 10px;
+}
 
 /*branding*/
 .brandcontainer{
   display: grid;
-  grid-template-columns: repeat(6, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   align-items: center;
   justify-content: space-between;
   margin-top: 2rem;
@@ -273,23 +279,34 @@ img{
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 950px){
+@media (max-width: 991px){
   header{
-    padding: 18px 4%;
+    padding: 15px 1%;
   }
   section{
     padding: 50px 4%;
   }
+
 }
+
+@media (max-width: 881px){
+  .home-text{
+    font-size: 1.5rem;
+  }
+  .shop-container,
+  .new-container{
+    grid-template-columns: repeat(auto-fit, minmax(218px,auto));
+  }
+}
+
 @media(max-width: 768px){
   header{
-    padding: 11px 4%;
+    padding: 18px 4%;
   }
   #menu-icon{
-   
-    display :initial;
+   display :initial;
   }
-  header .navbar{
+  .navbar{
     position: absolute;
     top: -500px;
     left: 0;
@@ -305,11 +322,85 @@ img{
     padding: 1.5rem;
     display: block;
   }
-  .navbar .active{
+  .navbar.active{
     top:100%;
   }
   .navbar a:hover{
     color: white;
     background: var(--main-color);
+  }
+  .brandcontainer{
+    display: grid;
+    margin-left: -30px;
+    margin-right: -10px;
+    background-color: bisque;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+  .shop-container,
+  .new-container{
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 10px;
+  }
+  .brandcontainer img:hover{
+    filter: grayscale(0);
+  }
+  .about{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+@media (max-width:491px){
+  .home-text h1{
+    font-size: 1.7rem;
+  }
+  .shop-container,
+  .new-container{
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    gap: 10px;
+  }
+  .box .box-img{
+    height: 200px;
+  }
+  .newsbox input{
+    width: 180px;
+  }
+  
+  .about .content{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+  .about .content h2{
+    font-size: 1.2rem;
+  }
+  .about .content h3{
+    font-size: 1.5rem;
+  }
+  .thirdcontainer{
+    display: flex;
+    flex-direction: column-reverse;
+    grid: 10px;
+    align-items: center;
+  }
+  .brandcontainer{
+    display: grid;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 10px;
+    
+    grid-template-columns: repeat(auto-fit, minmax(50px, auto));
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+  .footer{
+    font-size: 15px;
   }
 }
